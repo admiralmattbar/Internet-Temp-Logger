@@ -1,3 +1,8 @@
+/*This is code on the Arduino Uno's ATMEGA328P. The goal for this is to get a temperature reading with the DS18, display it on an LCD
+screen and then communicate that information to the serial. An independently programmed ESP8266 will ping the serial with a special
+character, "<", and get the temp to broadcast on thingspeak (it was recommended that I do not us AT commands because they are weird).
+I tried an Instructables project that was similar but it just did not work.*/
+
 #include <OneWire.h>
 #include <DallasTemperature.h>
 #include <LiquidCrystal.h>
